@@ -1,0 +1,15 @@
+Data Capture: Automatically capture job details like job description, URL, company name, and position when you apply.
+Status Tracking: Track the status of your job applications.
+Integration with Notion: Use the Notion API to push the captured data to a Notion document.
+
+Capture Job Application Data ====
+Content Scripts: Use content scripts to interact with web pages and extract necessary job details. These scripts can be injected into job application sites to capture data.
+Event Listeners: Set up event listeners to detect when a job application is submitted, and trigger data capture.
+
+Integrate with Notion ====
+Notion API: Register a Notion integration to obtain an API key. This will allow your extension to interact with your Notion workspace.
+API Requests: Use the Notion API to create or update pages in your Notion database with the captured job application data. You will need to handle authentication and API requests in your extension.
+
+Track Application Status ====
+Local Storage or IndexedDB: Use browser storage options to save the status of job applications locally.
+User Interface: Provide a simple UI to display and update the status of each application.
