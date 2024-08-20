@@ -4,7 +4,22 @@
   "description": "Base Level Extension",
   "version": "1.0",
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
+    "default_title": "Hello World!",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/hello_extensions.png",
+      "32": "images/hello_extensions.png",
+      "48": "images/hello_extensions.png"
+    }
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ],
+      "js": ["scripts/readContent.js"]
+    }
+  ]
 }
