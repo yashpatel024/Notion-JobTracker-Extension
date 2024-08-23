@@ -2,24 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Job Tracker</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./popup.css" />
   </head>
   <body>
-    <template id="li_template">
-      <li>
-        <a>
-          <h3 class="title">Tab Title</h3>
-          <p class="pathname">Tab Pathname</p>
-        </a>
-      </li>
-    </template>
-
-    <h1>Google Dev Docs</h1>
-    <button>Group Tabs</button>
-    <ul></ul>
-
-    <script src="./popup.js" type="module"></script>
+    <div class="navtabs">
+      <div class="navtab active" data-target="playground">Playground</div>
+      <div class="navtab" data-target="settings">Settings</div>
+      <div class="underline"></div>
+    </div>
+    <div id="playground" class="content active">
+      <h1>Playground</h1>
+    </div>
+    <div id="settings" class="content">
+      <h1>Settings</h1>
+    </div>
+    <script src="scripts/popup.js" type="module"></script>
   </body>
 </html>

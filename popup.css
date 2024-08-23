@@ -1,24 +1,74 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+}
+
 body {
-  width: 20rem;
-}
-
-ul {
-  list-style-type: none;
-  padding-inline-start: 0;
-  margin: 1rem 0;
-}
-
-li {
-  padding: 0.25rem;
-}
-li:nth-child(odd) {
-  background: #80808030;
-}
-li:nth-child(even) {
-  background: #ffffff;
-}
-
-h3,
-p {
+  width: 400px;
+  height: 558px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.navtabs {
+  display: flex;
+  flex-direction: row;
+  background: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.navtab {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.navtab:hover {
+  color: var(--primary-color);
+}
+
+.navtab.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.content {
+  display: none;
+  padding: 100px 20px 20px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.content.active {
+  display: block;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #007BFF;
+  transition: left 0.3s ease, width 0.3s ease;
 }

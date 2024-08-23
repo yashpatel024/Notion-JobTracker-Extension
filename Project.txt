@@ -13,3 +13,13 @@ API Requests: Use the Notion API to create or update pages in your Notion databa
 Track Application Status ====
 Local Storage or IndexedDB: Use browser storage options to save the status of job applications locally.
 User Interface: Provide a simple UI to display and update the status of each application.
+
+
+UI / UX
+Two ways to trigger:
+  - Add a button to common job platform to save directly job\
+  - Click on a Extention, if we found anything on job page then it will automatically show everything on popup.
+
+Two Pages
+  - Default: Job Saving
+  - Setting: API Creds and Everything
