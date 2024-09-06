@@ -1,10 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Hi, Boss",
-  "description": "Base Level Extension",
+  "name": "Job Application Tracker",
+  "description": "Track job applications and get AI-powered answers to job questions",
   "version": "1.0",
   "action": {
-    "default_title": "Hello World!",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/hello_extensions.png",
@@ -12,14 +11,15 @@
       "48": "images/hello_extensions.png"
     }
   },
-  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "scripts/service_worker.js"
+  },
+  "permissions": ["activeTab", "storage", "scripting", "identity"],
+  "host_permissions": ["https://api.notion.com/*"],
   "content_scripts": [
     {
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ],
-      "js": ["scripts/readContent.js"]
+      "matches": ["https://www.google.com/*"],
+      "js": ["scripts/content_scripts.js"]
     }
   ]
 }

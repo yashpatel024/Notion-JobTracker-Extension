@@ -19,6 +19,7 @@ body {
   position: relative;
 }
 
+/* Nav Tabs - Navigation Tabs */
 .navtabs {
   display: flex;
   flex-direction: row;
@@ -53,9 +54,10 @@ body {
   font-weight: 600;
 }
 
+/* Content - Popup Content - Job Form / Settings Form */
 .content {
   display: none;
-  padding: 100px 20px 20px;
+  padding: 20px 50px;
   position: relative;
   width: 100%;
   text-align: center;
@@ -63,6 +65,7 @@ body {
 
 .content.active {
   display: block;
+  position: relative;
 }
 
 .underline {
@@ -71,4 +74,116 @@ body {
   height: 2px;
   background: #007BFF;
   transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* Job Form  - Capture Job Details */
+.job-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.job-form h2 {
+  font-size: 1.7rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.job-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 300px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  flex-shrink: 1;
+  font-size: 1rem;
+}
+
+.job-form form label {
+  margin-bottom: 6px;
+}
+
+.job-form form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  width: calc(100% - 20px);
+}
+
+.horizontal-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.form-error {
+  color: red;
+  display: none;
+}
+
+.save-job-btn {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.save-job-btn:hover {
+  background-color: #005cbf;
+}
+
+/* Settings Form  - Configuration */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.settings-form h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.oauth-button-btn {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.oauth-button-btn:hover {
+  background-color: #005cbf;
 }

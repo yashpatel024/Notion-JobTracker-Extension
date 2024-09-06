@@ -20,10 +20,47 @@
       <div class="underline"></div>
     </div>
     <div id="playground" class="content active">
-      <h1>Playground</h1>
+      <div class="job-form">
+        <h2>Job Tracker</h2>
+        <form>
+          <div class="input-container">
+            <label for="job-title">Position</label>
+            <input type="text" id="job-title" name="job-title" />
+          </div>
+          <div class="input-container">
+            <label for="job-url">Company name</label>
+            <input type="text" id="job-url" name="job-url" />
+          </div>
+          <div class="horizontal-input">
+            <div class="input-container">
+              <label for="job-company">Location</label>
+              <input type="text" id="job-company" name="job-company" />
+            </div>
+            <div class="input-container">
+              <label for="job-position">Reference</label>
+              <input type="text" id="job-position" name="job-position" />
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="job-position">Extra details</label>
+            <input type="text" id="job-position" name="job-position" />
+          </div>
+          <p class="form-error"></p>
+          <button type="submit" class="save-job-btn">Save the job</button>
+        </form>
+      </div>
     </div>
     <div id="settings" class="content">
-      <h1>Settings</h1>
+      <div class="settings-form">
+        <h1>Settings</h1>
+        <!-- login status hidden field -->
+        <p id="login-status" type="hidden">Not logged in</p>
+        <!-- OAuth 2.0 Button for Notion API -->
+        <div class="oauth-button">
+          <button id="oauth-login-button-btn" class="oauth-button-btn">Connect to Notion</button>
+          <button id="oauth-logout-button-btn" class="oauth-button-btn">Sign out of Notion</button>
+        </div>
+      </div>
     </div>
     <script src="scripts/popup.js" type="module"></script>
   </body>

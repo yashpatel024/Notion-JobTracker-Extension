@@ -64,6 +64,9 @@
     "activeTab", // Access to the active tab
     "scripting" // Access to the scripting API - Insert or remove the style sheet using the Scripting API.
   ]
+
+## Host Permissions
+"host_permissions" - Contains one or more match patterns that give access to one or more hosts. Changes may trigger a warning.
 ```
 
 # Keyboard Shortcuts
