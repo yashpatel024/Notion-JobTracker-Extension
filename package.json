@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yashpatel024/Something-ChromeExtention.git"
+    "url": "https://github.com/yashpatel024/Notion-JobTracker-Extension"
   },
   "scripts": {
     "build": "node utils/build.js",

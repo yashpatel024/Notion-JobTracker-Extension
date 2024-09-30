@@ -1,6 +1,6 @@
 const CLIENT_ID = '5364b530-0604-4452-8d2c-e18d381cb629';
 const REDIRECT_URI = chrome.identity.getRedirectURL();
-const CLIENT_SECRET = 'secret_TYw1p8G5gQCMjzThSxaYOBmEbaMShvvJBgHN5rn1lGl';
+const CLIENT_SECRET = ''; //TODO: Add client secret
 const NOTION_AUTH_URL = `https://api.notion.com/v1/oauth/authorize?client_id=${CLIENT_ID}&response_type=code&owner=user&redirect_uri=${encodeURIComponent(
   REDIRECT_URI
 )}`;
@@ -38,7 +38,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
           sendResponse({ success: false, error: 'Failed to authenticate' });
           return;
         }
-        
+
         // Parse redirect URL
         const url = new URL(redirectUrl);
         const code = url.searchParams.get('code');
@@ -96,7 +96,7 @@ async function exchangeCodeForToken(code) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Basic ' + btoa(`${CLIENT_ID}:${CLIENT_SECRET}`),
+      Authorization: 'Basic ' + btoa(`${CLIENT_ID}:${CLIENT_SECRET}`),
     },
     body: JSON.stringify({
       grant_type: 'authorization_code',
